@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `yossiee.com`,
+    title: `Yoshimitsu Egashira`,
     description: `meta description のテスト`,
     author: `@yossiee_jp`,
   },

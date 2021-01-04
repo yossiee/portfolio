@@ -22,7 +22,7 @@
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "portfolio", "personal blog", "personal website"
   ],
   "license": "0BSD",
   "scripts": {
@@ -36,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/yossiee/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/yossiee/portfolio/issues"
   }
 }

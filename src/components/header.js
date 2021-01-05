@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Emoji from "../images/favicon.png"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -19,10 +20,15 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/"
         style={{
+          alignItem: `center`,
           color: `white`,
+          display: `flex`,
+          fontWeight: 500,
           textDecoration: `none`,
+          whiteSpace: `nowrap`
         }}
       >
+        <img style={{ height: `26px`, width: `26px`, margin: `0 0.5rem 0 0` }} src={Emoji} />
         {siteTitle}
       </Link>
     </div>

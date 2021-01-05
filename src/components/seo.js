@@ -34,7 +34,11 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle && title !== 'Yoshimitsu Egashira' ? `%s | ${defaultTitle}` : null}
+      titleTemplate={
+        defaultTitle && title !== "Yoshimitsu Egashira"
+          ? `%s | ${defaultTitle}`
+          : null
+      }
       meta={[
         {
           name: `description`,

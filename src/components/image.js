@@ -1,6 +1,6 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 export default (props) => (
   <StaticQuery

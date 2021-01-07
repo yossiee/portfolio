@@ -25,10 +25,14 @@ const Header = ({ siteTitle }) => (
           display: `flex`,
           fontWeight: 500,
           textDecoration: `none`,
-          whiteSpace: `nowrap`
+          whiteSpace: `nowrap`,
         }}
       >
-        <img alt="emoji" style={{ height: `26px`, width: `26px`, margin: `0 0.5rem 0 0` }} src={Emoji} />
+        <img
+          alt="emoji"
+          style={{ height: `26px`, width: `26px`, margin: `0 0.5rem 0 0` }}
+          src={Emoji}
+        />
         {siteTitle}
       </Link>
     </div>

@@ -8,10 +8,25 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Yoshimitsu Egashira" />
-    <h1>Welcome to my website <span role="img" aria-label="tada">🎉</span></h1>
-    <p>こんにちは。<br />まだ何もありません。これから React + Gatsby で作っていきます。</p>
+    <h1>
+      Welcome to my website{" "}
+      <span role="img" aria-label="tada">
+        🎉
+      </span>
+    </h1>
+    <p>
+      こんにちは。
+      <br />
+      まだ何もありません。これから React + Gatsby で作っていきます。
+    </p>
     <br />
-    <div style={{ maxWidth: `300px`, margin: `0 auto 1.45rem`, textAlign: `center ` }}>
+    <div
+      style={{
+        maxWidth: `300px`,
+        margin: `0 auto 1.45rem`,
+        textAlign: `center `,
+      }}
+    >
       <Image filename="gatsby-astronaut.png" alt="default image" />
       <span>（サンプル画像です）</span>
     </div>

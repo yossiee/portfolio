@@ -3,10 +3,22 @@ import React from "react"
 const Footer = () => (
   <footer
     style={{
-      marginTop: `2rem`,
+      padding: `2rem`,
+      textAlign: `center`,
     }}
   >
-    © {new Date().getFullYear()} Yoshimitsu Egashira
+    <p style={{ fontSize: `0.8rem`, margin: 0 }}>
+      ©{" "}
+      <a
+        href="https://twitter.com/yossiee_jp"
+        style={{ textDecoration: `none` }}
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        yossiee
+      </a>{" "}
+      - {new Date().getFullYear()}
+    </p>
   </footer>
 )
 

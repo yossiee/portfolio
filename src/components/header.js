@@ -2,37 +2,13 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Emoji from "../images/favicon.png"
+import styles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#3c4c6c`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <Link
-        to="/"
-        style={{
-          alignItem: `center`,
-          color: `white`,
-          display: `flex`,
-          fontWeight: 500,
-          textDecoration: `none`,
-          whiteSpace: `nowrap`,
-        }}
-      >
-        <img
-          alt="emoji"
-          style={{ height: `26px`, width: `26px`, margin: `0 0.5rem 0 0` }}
-          src={Emoji}
-        />
+  <header className={ styles.header }>
+    <div className={ styles.header__wrapper }>
+      <Link to="/" className={ styles.header__wrapper__logo }>
+        <img alt="emoji" src={Emoji} />
         {siteTitle}
       </Link>
     </div>

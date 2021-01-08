@@ -1,17 +1,12 @@
 import React from "react"
+import styles from "./footer.module.scss"
 
 const Footer = () => (
-  <footer
-    style={{
-      padding: `2rem`,
-      textAlign: `center`,
-    }}
-  >
-    <p style={{ fontSize: `0.8rem`, margin: 0 }}>
+  <footer className={ styles.footer }>
+    <p className={ styles.footer__signature }>
       ©{" "}
       <a
         href="https://twitter.com/yossiee_jp"
-        style={{ textDecoration: `none` }}
         rel="noreferrer noopener"
         target="_blank"
       >

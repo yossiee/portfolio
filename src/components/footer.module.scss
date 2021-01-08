@@ -1,0 +1,13 @@
+.footer {
+  padding: 2rem;
+  text-align: center;
+
+  &__signature {
+    font-size: 0.8rem;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

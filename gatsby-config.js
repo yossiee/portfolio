@@ -33,6 +33,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }

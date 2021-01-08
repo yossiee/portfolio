@@ -5,9 +5,9 @@ import Emoji from "../images/favicon.png"
 import styles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => (
-  <header className={ styles.header }>
-    <div className={ styles.header__wrapper }>
-      <Link to="/" className={ styles.header__wrapper__logo }>
+  <header className={styles.header}>
+    <div className={styles.header__wrapper}>
+      <Link to="/" className={styles.header__wrapper__logo}>
         <img alt="emoji" src={Emoji} />
         {siteTitle}
       </Link>

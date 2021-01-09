@@ -24,7 +24,8 @@
                 "singleQuote": true,
                 "trailingComma": "none"
             }
-        ]
+        ],
+        "no-console": "warn"
     },
     "settings": {
         "react": {

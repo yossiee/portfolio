@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Yoshimitsu Egashira`,
     description: `meta description のテスト`,
-    author: `@yossiee_jp`,
+    author: `@yossiee_jp`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +10,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -24,15 +24,15 @@ module.exports = {
         background_color: `#3c4c6c`,
         theme_color: `#3c4c6c`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
-      },
+        icon: `src/images/favicon.png`
+      }
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        pathToConfigModule: `src/utils/typography`
+      }
     },
-    `gatsby-plugin-sass`,
-  ],
+    `gatsby-plugin-sass`
+  ]
 }

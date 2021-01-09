@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import Image from '../components/image'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Yoshimitsu Egashira" />
     <h1>
-      Welcome to my website{" "}
+      Welcome to my website{' '}
       <span role="img" aria-label="tada">
         🎉
       </span>
@@ -24,7 +24,7 @@ const IndexPage = () => (
       style={{
         maxWidth: `300px`,
         margin: `0 auto 1.45rem`,
-        textAlign: `center `,
+        textAlign: `center `
       }}
     >
       <Image filename="gatsby-astronaut.png" alt="default image" />

@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Emoji from "../images/favicon.png"
-import styles from "./header.module.scss"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Emoji from '../images/favicon.png'
+import styles from './header.module.scss'
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
@@ -16,11 +16,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Header

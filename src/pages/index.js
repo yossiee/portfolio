@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import avatar from '../images/profile.png'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 import EntryItem from '../components/EntryItem'
 
@@ -16,30 +16,20 @@ const IndexPage = ({ data }) => {
     <>
       <Layout>
         <SEO title="Yoshimitsu Egashira" />
-        <h1>
-          Welcome to my website{' '}
-          <span role="img" aria-label="tada">
-            🎉
-          </span>
-        </h1>
-        <p>
-          こんにちは。
-          <br />
-          まだ何もありません。これから React + Gatsby で作っていきます。
-        </p>
-        <br />
         <div
           style={{
-            maxWidth: `300px`,
-            margin: `0 auto 1.45rem`,
-            textAlign: `center `
+            display: `flex`,
+            justifyContent: `space-around`,
+            marginBottom: `3rem`
           }}
         >
-          <Image filename="gatsby-astronaut.png" alt="default image" />
-          <span>（サンプル画像です）</span>
-        </div>
-        <div style={{ width: `100%`, textAlign: `right` }}>
-          <Link to="/about">このサイトについて</Link>
+          <img alt="yossiee" src={avatar} className="profile" />
+          <div>
+            <h4>こんにちは</h4>
+            <p>
+              こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
+            </p>
+          </div>
         </div>
         <section>
           <h2>最新のエントリー</h2>

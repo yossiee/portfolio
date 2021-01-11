@@ -1,3 +1,25 @@
+/* Global variables */
+:root {
+  --font-color: #495057;
+  --heading-color: #343a40;
+  --background: white;
+  --dark-font-color: #1b1d25;
+  --medium-font-color: #60656c;
+  --light-font-color: #858b93;
+  --light-background: #f1f4f8;
+  --light-background-hover: #e1e6ed;
+  --border: #d6d9de;
+  --link-color: #5183f5;
+  --link-color-darker: #364fc7;
+  --navbar-color: #1b1d25;
+  --blockquote: #edf2ff;
+  --transparent-text: rgba(0, 0, 0, 0.7);
+  --transparent-bg: rgba(0, 0, 0, 0.05);
+  --light-transparent-bg: rgba(255, 255, 255, 0.1);
+  --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace;
+}
+
+/* Global styles */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -7,6 +29,7 @@ html {
 }
 
 body {
+  color: var(--font-color);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,6 +41,20 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--heading-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
@@ -43,7 +80,9 @@ progress {
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
+  border-radius: 4px;
+  color: var(--font-color);
+  text-decoration: none;
 
   &:active, &:hover {
     outline-width: 0;
@@ -74,7 +113,6 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -116,6 +154,12 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+
+  &.profile {
+    height: 5rem;
+    margin: auto 3rem;
+    width: 5rem;
+  }
 }
 
 svg:not(:root) {
@@ -249,19 +293,13 @@ textarea {
 }
 
 h2 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
+  border-bottom: 4px solid var(--light-background);
   font-size: 1.62671rem;
+  font-weight: bold;
   line-height: 1.1;
+  margin-bottom: 1.45rem;
+  padding-bottom: .5rem;
+  text-rendering: optimizeLegibility;
 }
 
 h3 {
@@ -273,7 +311,6 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -289,7 +326,6 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -305,7 +341,6 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -321,7 +356,6 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -340,14 +374,8 @@ hgroup {
 }
 
 ul, ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -420,6 +448,7 @@ b, strong, dt, th {
 
 li {
   margin-bottom: calc(1.45rem / 2);
+  list-style: none;
 }
 
 ol li, ul li {
@@ -539,5 +568,12 @@ pre {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+$break: 768px;
+@mixin break {
+  @media (max-width: ($break)) {
+    @content;
   }
 }

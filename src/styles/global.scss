@@ -57,6 +57,10 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block;
 }
@@ -156,9 +160,10 @@ img {
   margin-bottom: 1.45rem;
 
   &.profile {
-    height: 5rem;
-    margin: auto 3rem;
-    width: 5rem;
+    height: 81px;
+    width: 81px;
+    margin-bottom: 0;
+    margin-right: 2rem;
   }
 }
 

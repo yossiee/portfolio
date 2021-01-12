@@ -1,0 +1,8 @@
+.bio {
+  display: flex;
+  justify-content: flex-start;
+
+  a:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}

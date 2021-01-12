@@ -6,6 +6,7 @@ import avatar from '../images/profile.png'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import EntryItem from '../components/EntryItem'
+import Bio from '../components/Bio'
 
 const IndexPage = ({ data }) => {
   const {
@@ -16,21 +17,36 @@ const IndexPage = ({ data }) => {
     <>
       <Layout>
         <SEO title="Yoshimitsu Egashira" />
-        <div
-          style={{
-            display: `flex`,
-            justifyContent: `space-around`,
-            marginBottom: `3rem`
-          }}
-        >
-          <img alt="yossiee" src={avatar} className="profile" />
-          <div>
-            <h4>こんにちは</h4>
-            <p>
-              こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
-            </p>
+        <section>
+          <div
+            style={{
+              alignItems: `center`,
+              display: `flex`,
+              justifyContent: `space-around`,
+              padding: `0 2rem 2rem`
+            }}
+          >
+            <img alt="yossiee" src={avatar} className="profile" />
+            <div>
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `row`,
+                  justifyContent: `space-between`,
+                  paddingBottom: `1rem`
+                }}
+              >
+                <span style={{ fontWeight: `500` }}>yossiee</span>
+                <Bio />
+              </div>
+              <p style={{ marginBottom: 0 }}>
+                社会人 3 年目の Web エンジニア 25
+                歳。バックエンドの設計・開発が得意ですが、最近はフロントエンドにも手を伸ばしています。インフラは
+                AWS が好きです。
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
         <section>
           <h2>最新のエントリー</h2>
           <ul>

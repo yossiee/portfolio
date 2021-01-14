@@ -11,6 +11,9 @@ const Header = ({ siteTitle }) => (
         <img alt="emoji" src={Emoji} />
         {siteTitle}
       </Link>
+      <div className={styles.header__wrapper__menus}>
+        <Link to="/about">About</Link>
+      </div>
     </div>
   </header>
 )
@@ -20,7 +23,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: `Yoshimitsu Egashira`
 }
 
 export default Header

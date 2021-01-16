@@ -3,5 +3,39 @@
  *
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
+const path = require('path')
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return graphql(
+    `
+      {
+        allMicrocmsEntries {
+          edges {
+            node {
+              id
+              slug
+              title
+              body
+            }
+          }
+        }
+      }
+    `
+  ).then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    result.data.allMicrocmsEntries.edges.forEach((edge) => {
+      createPage({
+        path: `/entries/${edge.node.id}`,
+        component: path.resolve(`./src/templates/entry.js`),
+        context: {
+          id: edge.node.id
+        }
+      })
+    })
+  })
+}

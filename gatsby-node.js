@@ -29,8 +29,6 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     result.data.allMicrocmsEntries.edges.forEach((edge) => {
-      console.log(edge)
-
       createPage({
         path: `/entries/${edge.node.id}`,
         component: path.resolve(`./src/templates/entry.js`),

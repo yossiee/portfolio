@@ -21,7 +21,6 @@ export const query = graphql`
   query($id: String!) {
     entryDetail: microcmsEntries(id: { eq: $id }) {
       body
-      entriesId
       id
       slug
       title
@@ -29,8 +28,8 @@ export const query = graphql`
   }
 `
 
-EntryDetail.PropTypes = {
-  data: PropTypes.isRequired.shape({
+EntryDetail.propTypes = {
+  data: PropTypes.shape({
     body: PropTypes.string,
     id: PropTypes.string,
     slug: PropTypes.int,

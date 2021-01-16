@@ -5,13 +5,36 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
-const EntryDetail = (data) => {
+const EntryDetail = ({ data }) => {
+  const {
+    entryDetail: { body, id, slug, title, createdAt }
+  } = data
+
   return (
     <>
       <Layout>
-        <SEO title={data.title} />
-        <p>{data.title}</p>
-        <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
+        <SEO title={title} />
+        <h2>{title}</h2>
+
+        <section>
+          <h3>エントリー情報</h3>
+
+          <table>
+            <tr>
+              <td>投稿日</td>
+              <td>{createdAt}</td>
+            </tr>
+            <tr>
+              <td>エントリーNo.</td>
+              <td>{slug}</td>
+            </tr>
+            <tr>
+              <td>エントリーID.</td>
+              <td>{id}</td>
+            </tr>
+          </table>
+          <div dangerouslySetInnerHTML={{ __html: body }}></div>
+        </section>
       </Layout>
     </>
   )
@@ -21,6 +44,7 @@ export const query = graphql`
   query($id: String!) {
     entryDetail: microcmsEntries(id: { eq: $id }) {
       body
+      createdAt(formatString: "YYYY-MM-DD")
       id
       slug
       title
@@ -29,20 +53,18 @@ export const query = graphql`
 `
 
 EntryDetail.propTypes = {
-  data: PropTypes.shape({
-    body: PropTypes.string,
-    id: PropTypes.string,
-    slug: PropTypes.int,
-    title: PropTypes.string
-  })
+  data: PropTypes.object
 }
 
 EntryDetail.defaultProps = {
   data: {
-    body: ``,
-    id: ``,
-    slug: null,
-    title: ``
+    entryDetail: {
+      body: ``,
+      createdAt: ``,
+      id: ``,
+      slug: null,
+      title: ``
+    }
   }
 }
 

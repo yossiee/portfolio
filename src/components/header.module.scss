@@ -1,23 +1,32 @@
 .header {
-  background: #3c4c6c;
-  margin-bottom: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 
   &__wrapper {
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: 960px;
     padding: 1.45rem 1.085rem;
 
     &__logo {
       align-items: center;
-      color: white;
       display: flex;
-      font-weight: 500;
-      text-decoration: none;
       white-space: nowrap;
 
       img {
         height: 26px;
         margin: 0 0.5rem 0 0;
+        width: 26px;
+      }
+    }
+
+    &__menus {
+      align-items: center;
+      display: flex;
+
+      a {
+        padding: 0.75rem 1.25rem;
       }
     }
   }

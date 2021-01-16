@@ -1,3 +1,6 @@
+const dotenv = require('dotenv')
+dotenv.config({ path: `${__dirname}/.env` })
+
 module.exports = {
   siteMetadata: {
     title: `Yoshimitsu Egashira`,
@@ -33,6 +36,22 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: process.env.MICROCMS_API_KEY,
+        serviceId: process.env.MICROCMS_SERVICE_ID,
+        apis: [
+          {
+            endpoint: `about`,
+            format: 'object'
+          },
+          {
+            endpoint: `entries`
+          }
+        ]
+      }
+    }
   ]
 }

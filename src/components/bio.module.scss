@@ -1,0 +1,24 @@
+.bio {
+  display: flex;
+  justify-content: flex-start;
+
+  a:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+
+  .facebook:hover {
+    color: var(--facebook);
+  }
+
+  .github:hover {
+    color: var(--github);
+  }
+
+  .linkedin:hover {
+    color: var(--linkedin);
+  }
+
+  .twitter:hover {
+    color: var(--twitter);
+  }
+}

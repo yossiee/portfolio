@@ -41,13 +41,14 @@ const IndexPage = ({ data }) => {
           <h2>最新のエントリー</h2>
           <ul>
             {entries.map(({ node }) => {
-              const { id, slug, title, createdAt } = node
+              const { body, id, title, createdAt } = node
 
               return (
                 <EntryItem
                   key={id}
-                  slug={slug}
+                  id={id}
                   title={title}
+                  body={body}
                   createdAt={createdAt}
                 />
               )
